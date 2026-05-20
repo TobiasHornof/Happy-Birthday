@@ -147,17 +147,89 @@ img {
 
     <div class="error" id="error5"></div>
   </div>
-
-  <div id="step6" class="hidden">
+  
+    <div id="step6" class="hidden">
     <h1>❤️ Frage 6 ❤️</h1>
 
-    <p>Wieviele Tage sind wir bereits zusammen?</p>
+    <p>Wie hieß das Restaurant in dem wir zuerst essen waren?</p>
 
     <input type="text" id="answer6">
 
     <button onclick="check6()">Abschicken</button>
 
     <div class="error" id="error6"></div>
+  </div>
+
+    <div id="step7" class="hidden">
+    <h1>❤️ Frage 7 ❤️</h1>
+
+    <p>Was war unsere erste gemeinsame Serie (nur eine Staffel)?</p>
+
+    <input type="text" id="answer7">
+
+    <button onclick="check7()">Abschicken</button>
+
+    <div class="error" id="error7"></div>
+  </div>
+  
+    <div id="step8" class="hidden">
+    <h1>❤️ Frage 8 ❤️</h1>
+
+    <p>Wie lautete mein erster Spitzname für dich?</p>
+
+    <input type="text" id="answer8">
+
+    <button onclick="check8()">Abschicken</button>
+
+    <div class="error" id="error8"></div>
+  </div>
+  
+    <div id="step9" class="hidden">
+    <h1>❤️ Frage 9 ❤️</h1>
+
+    <p>Welche Schuhmarke trage ich am liebsten?</p>
+
+    <input type="text" id="answer9">
+
+    <button onclick="check9()">Abschicken</button>
+
+    <div class="error" id="error9"></div>
+  </div>
+  
+    <div id="step10" class="hidden">
+    <h1>❤️ Frage 10 ❤️</h1>
+
+    <p>Welches Land würde ich sofort wieder bereisen?</p>
+
+    <input type="text" id="answer10">
+
+    <button onclick="check10()">Abschicken</button>
+
+    <div class="error" id="error10"></div>
+  </div>
+  
+    <div id="step11" class="hidden">
+    <h1>❤️ Frage 11 ❤️</h1>
+
+    <p>Welcher Film bringt mich immer zum weinen?</p>
+
+    <input type="text" id="answer11">
+
+    <button onclick="check11()">Abschicken</button>
+
+    <div class="error" id="error11"></div>
+  </div>
+  
+  <div id="step12" class="hidden">
+    <h1>❤️ Frage 12 ❤️</h1>
+
+    <p>Wieviele Tage sind wir bereits zusammen?</p>
+
+    <input type="text" id="answer12">
+
+    <button onclick="check12()">Abschicken</button>
+
+    <div class="error" id="error12"></div>
   </div>
 
   <div id="loading" class="hidden">
@@ -241,13 +313,79 @@ function check5() {
       "Leider falsch ❤️";
   }
 }
-
+  
 function check6() {
   let value = document.getElementById("answer6").value;
 
+  if(value === "Gasthof Krone" || value === "Krone") {
+    next("step6", "step7");
+  } else {
+    document.getElementById("error6").innerText =
+      "Leider falsch ❤️";
+  }
+}
+  
+function check7() {
+  let value = document.getElementById("answer7").value;
+
+  if(value === "Amercian Horror Story") {
+    next("step7", "step8");
+  } else {
+    document.getElementById("error7").innerText =
+      "Leider falsch ❤️";
+  }
+}
+  
+function check8() {
+  let value = document.getElementById("answer8").value;
+
+  if(value === "Mupfel") {
+    next("step8", "step9");
+  } else {
+    document.getElementById("error8").innerText =
+      "Leider falsch ❤️";
+  }
+}
+  
+function check9() {
+  let value = document.getElementById("answer9").value;
+
+  if(value === "Adidas") {
+    next("step9", "step10");
+  } else {
+    document.getElementById("error9").innerText =
+      "Leider falsch ❤️";
+  }
+}
+  
+function check10() {
+  let value = document.getElementById("answer10").value;
+
+  if(value === "Thailand") {
+    next("step10", "step11");
+  } else {
+    document.getElementById("error10").innerText =
+      "Leider falsch ❤️";
+  }
+}
+  
+function check11() {
+  let value = document.getElementById("answer11").value;
+
+  if(value === "Hachiko") {
+    next("step11", "step12");
+  } else {
+    document.getElementById("error11").innerText =
+      "Leider falsch ❤️";
+  }
+}
+
+function check12() {
+  let value = document.getElementById("answer12").value;
+
   if(value === "3427") {
 
-    document.getElementById("step6")
+    document.getElementById("step12")
       .classList.add("hidden");
 
     document.getElementById("loading")
@@ -264,7 +402,7 @@ function check6() {
     }, 4000);
 
   } else {
-    document.getElementById("error6").innerText =
+    document.getElementById("error12").innerText =
       "Leider falsch ❤️";
   }
 }
