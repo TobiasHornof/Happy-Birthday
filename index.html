@@ -234,7 +234,7 @@ function check4() {
 function check5() {
   let value = document.getElementById("answer5").value;
 
-  if(value === "Nudeln mit Lachs") {
+  if(value === "Nudeln mit Lachs" || value === "Lachsnudeln") {
     next("step5", "step6");
   } else {
     document.getElementById("error5").innerText =
